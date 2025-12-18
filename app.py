@@ -24,8 +24,8 @@ with st.container():
         </div>
     """, unsafe_allow_html=True)
     
-    # 修正：定義 col_t1, col_t2, col_t3 (原本 col_t4 是錯誤的)
-    col_t1, col_t2, col_t3 = st.columns([1, 1, 6])
+    # 修正：定義 col_t1, col_t2, 
+    col_t1, col_t2 = st.columns([1, 1])
     with col_t1:
         st.button("首頁", use_container_width=True)
     with col_t2:
@@ -62,3 +62,4 @@ with col_right:
 
     # 嵌入報表
     components.iframe(looker_url, height=800, scrolling=True)
+
