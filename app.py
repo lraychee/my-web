@@ -24,12 +24,13 @@ with st.container():
         </div>
     """, unsafe_allow_html=True)
     
-    # 修正：定義 col_t1, col_t2, 
-    col_t1, col_t2 = st.columns([1, 1])
-    with col_t1:
-        st.button("首頁", use_container_width=True)
-    with col_t2:
-        st.button("系統設定", use_container_width=True)
+    # 修改這部分
+col_t1, col_t2, col_spacer = st.columns([1, 1, 6]) # 1:1:6 的比例
+with col_t1:
+    st.button("首頁", use_container_width=True)
+with col_t2:
+    st.button("系統設定", use_container_width=True)
+# col_spacer 留空不寫內容，作為推開空間使用
 
 st.markdown("---") # 分隔線
 
@@ -62,4 +63,5 @@ with col_right:
 
     # 嵌入報表
     components.iframe(looker_url, height=800, scrolling=True)
+
 
