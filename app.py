@@ -52,7 +52,7 @@ with col_right:
     st.subheader(f"📊 {sub_function} 數據顯示")
     
     # 根據左邊選單選擇，顯示不同的 Looker Studio 報表 (示範用)
-    if sub_function == "Looker Report":
+    if sub_function == "監控數據":
         looker_url = "https://lookerstudio.google.com/embed/reporting/be525ae8-b922-4993-8909-0d145c8e0291/page/ruyiF"
     elif sub_function == "流量分析":
         looker_url = "你的 Looker Studio 報表網址 2"
@@ -61,3 +61,4 @@ with col_right:
 
     # 嵌入報表
     components.iframe(looker_url, height=800, scrolling=True)
+
