@@ -27,8 +27,12 @@ with st.container():
     # 這裡可以放一些全域按鈕或功能
     col_t1, col_t2, col_t3 = st.columns([1, 1, 6])
     with col_t1:
-        st.button("主首頁", use_container_width=True)
+        st.button("首頁", use_container_width=True)
     with col_t2:
+        st.button("監控數據", use_container_width=True)
+    with col_t3:
+        st.button("其他", use_container_width=True)
+    with col_t4:
         st.button("系統設定", use_container_width=True)
 
 st.markdown("---") # 分隔線
@@ -38,13 +42,8 @@ st.markdown("---") # 分隔線
 col_left, col_right = st.columns([1, 4])
 
 with col_left:
-    st.subheader("📁 子功能")
-    # 使用 radio 或 button 製作子選單
-    sub_function = st.radio(
-        "切換報表內容：",
-        ["營收概況", "流量分析", "使用者回饋"],
-        index=0
-    )
+    st.subheader("📁 監控數據")
+    # 使用 radio 或 button 製作子選單    
     
     st.info(f"目前檢視：{sub_function}")
     st.button("導出報表", use_container_width=True)
